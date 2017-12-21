@@ -1,0 +1,17 @@
+<%= form_with(model: @article, local: true) do |article| %>
+    <div class="field">
+      <%= article.label :title %>
+      <%= article.text_field :title, id: :title %>
+    </div>
+
+    <div class="field">
+      <%= article.label :description %>
+      <%= article.text_area :description, id: :description, size: "60x20"%>
+    </div>
+    
+    <div class="actions">
+      <%= article.submit %>
+    </div>
+
+<% end %>
+

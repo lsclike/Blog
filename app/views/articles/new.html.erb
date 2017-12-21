@@ -1,0 +1,22 @@
+<h1>Create an article</h1>
+
+<%= form_with model: @article do |article| %>
+  <p>
+    <%= article.label :title %><br/>
+    <%= article.text_field :title,id: :title,class: :title %>
+  </p>
+
+  <p>
+    <%= article.label :description %><br/>
+    <%=  article.text_area :description,
+         size: "60x10",id: :description,class: :description %>
+  </p>
+
+  <p>
+    <%= article.submit("create the article") %>
+  </p>
+
+    <p>
+      <%= link_to 'Back', articles_path %>
+    </p>
+<% end %>
